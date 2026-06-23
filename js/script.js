@@ -82,7 +82,6 @@ const CONFIG = {
     {
       title: 'Mode Envoy',
       rows: [
-        ['Use', 'Daily work keyboard'],
         ['Case', 'PC case'],
         ['Plate', 'CF plate'],
         ['Switches', 'SWK Ghost Dragon'],
@@ -306,7 +305,7 @@ function buildCredit() {
   const body = mkEl('div', { class: 'window-body has-space credit-body' });
   body.append(
     mkEl('div', { class: 'credit-kicker' }, ['Credit / Thanks']),
-    mkEl('div', { class: 'credit-title' }, [`Original template by ${c.author} (@${c.handle})`]),
+    mkEl('div', { class: 'credit-title' }, [`Original by ${c.author} (@${c.handle})`]),
     mkEl('p', { class: 'bio-copy credit-copy' }, [c.note]),
     mkEl('div', { class: 'credit-actions' }, [
       mkEl('button', { onclick: () => window.open(c.github, '_blank') }, ['Open GitHub'])
