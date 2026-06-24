@@ -814,9 +814,9 @@ body {
     min-height: 76px;
     padding: 9px;
     border-radius: 5px;
-    background: rgba(255,255,255,.86);
+    background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(232,240,252,.82));
     border: 1px solid rgba(0,0,0,.13);
-    box-shadow: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
 }
 
 .gear-type {
@@ -958,12 +958,6 @@ body {
 }
 
 
-/* Start orb fix
-   The 7.css button skin adds pseudo-element gradients + inset shadows to every
-   button::before / button::after. The start orb also uses those pseudo-elements
-   for its hover sprite, so the default button shadow can show up as a thin
-   floating square border. Keep the template sprite behavior, but strip the
-   inherited button chrome from this one control. */
 .taskbar-start,
 .taskbar-start:hover,
 .taskbar-start:active,
@@ -1039,9 +1033,9 @@ body {
 .gear-spec-card {
     padding: 9px;
     border-radius: 5px;
-    background: rgba(255,255,255,.86);
+    background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(232,240,252,.82));
     border: 1px solid rgba(0,0,0,.13);
-    box-shadow: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
 }
 
 .gear-spec-title {
