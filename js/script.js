@@ -273,7 +273,7 @@ function buildGear() {
   });
 
   body.append(
-    mkEl('div', { class: 'gear-title' }, ["Check out Yua's representative gear."]),
+    mkEl('div', { class: 'gear-title' }, ["Yua's representative gear."]),
     grid,
     mkEl('div', { class: 'gear-title gear-subtitle' }, ['Keyboard specs']),
     specs,
