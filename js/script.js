@@ -42,8 +42,6 @@ const CONFIG = {
   profile: {
     name: 'yua',
     pronouns: 'he/him',
-    discordStatus: 'dnd',
-    statusLabel: 'DND',
     bio: 'Movement FPS enjoyer, tracking fps game main now mostly, into IEM, custom keyboard and peripherals',
     links: [
       { label: 'Gearz', url: 'https://gearz.gg/yuafps', icon: '🔗' },
@@ -82,6 +80,7 @@ const CONFIG = {
     {
       title: 'Mode Envoy',
       rows: [
+        ['Use', 'Daily work keyboard'],
         ['Case', 'PC case'],
         ['Plate', 'CF plate'],
         ['Switches', 'SWK Ghost Dragon'],
@@ -210,17 +209,13 @@ function buildAbout() {
   const avatar = mkEl('div', { class: 'pixel-avatar' }, [mkEl('img', { src: 'images/yua-avatar.png', alt: 'Yua profile picture', class: 'avatar-image' })]);
   const name = mkEl('div', { class: 'bio-name' }, ['hello im ', mkEl('span', {}, [p.name])]);
   const pronouns = mkEl('div', { class: 'bio-pronouns' }, [p.pronouns]);
-  const status = mkEl('div', { class: 'bio-discord-status' }, [
-    mkEl('span', { class: 'sdot s-dnd' }),
-    mkEl('span', {}, [p.statusLabel]),
-  ]);
   const linkGrid = mkEl('div', { class: 'social-btn-grid' });
   p.links.forEach(link => {
     linkGrid.appendChild(mkEl('button', { onclick: () => window.open(link.url, '_blank') }, [link.icon + ' ' + link.label]));
   });
 
   body.append(
-    mkEl('div', { class: 'bio-head' }, [avatar, mkEl('div', {}, [name, pronouns, status])]),
+    mkEl('div', { class: 'bio-head' }, [avatar, mkEl('div', {}, [name, pronouns])]),
     mkEl('fieldset', {}, [mkEl('legend', {}, ['Bio']), mkEl('p', { class: 'bio-copy' }, [p.bio])]),
     mkEl('fieldset', { style: { marginTop: '8px' } }, [mkEl('legend', {}, ['Links']), linkGrid])
   );
@@ -273,7 +268,7 @@ function buildGear() {
   });
 
   body.append(
-    mkEl('div', { class: 'gear-title' }, ["Yua's representative gear."]),
+    mkEl('div', { class: 'gear-title' }, ["Check out Yua's representative gear."]),
     grid,
     mkEl('div', { class: 'gear-title gear-subtitle' }, ['Keyboard specs']),
     specs,
@@ -305,7 +300,7 @@ function buildCredit() {
   const body = mkEl('div', { class: 'window-body has-space credit-body' });
   body.append(
     mkEl('div', { class: 'credit-kicker' }, ['Credit / Thanks']),
-    mkEl('div', { class: 'credit-title' }, [`Original by ${c.author} (@${c.handle})`]),
+    mkEl('div', { class: 'credit-title' }, [`Original template by ${c.author} (@${c.handle})`]),
     mkEl('p', { class: 'bio-copy credit-copy' }, [c.note]),
     mkEl('div', { class: 'credit-actions' }, [
       mkEl('button', { onclick: () => window.open(c.github, '_blank') }, ['Open GitHub'])
