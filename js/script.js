@@ -80,7 +80,6 @@ const CONFIG = {
     {
       title: 'Mode Envoy',
       rows: [
-        ['Use', 'Daily work keyboard'],
         ['Case', 'PC case'],
         ['Plate', 'CF plate'],
         ['Switches', 'SWK Ghost Dragon'],
